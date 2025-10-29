@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>SkyForge Studio – AAA Dragon Mascot Showcase</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<style>
+  :root {
+    --bg1:#0a0c12;
+    --bg2:#161a22;
+    --accent:#f8b73a;
+    --accent2:#ffd77c;
+    --blue:#3ab7ff;
+    --purple:#7d30ff;
+    --text:#f3f3f3;
+    --muted:#aaaaaa;
+    --card:rgba(255,255,255,0.07);
+    --border:rgba(255,255,255,0.12);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    background:radial-gradient(circle at center,var(--bg2)0%,var(--bg1)90%);
+    color:var(--text);
+    font:16px/1.6 "Inter",system-ui;
+    display:flex;justify-content:center;
+    overscroll-behavior:none;
+  }
+
+  .container{width:min(1080px,92vw);padding:26px 0;margin-bottom:40px;}
+
+  header{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:16px 24px;
+    display:flex;justify-content:space-between;align-items:center;
+    backdrop-filter:blur(12px);
+    box-shadow:0 8px 32px rgba(0,0,0,.45);
+  }
+  .brand{font-size:22px;font-weight:700;letter-spacing:.45px}
+  .subtle{font-size:13px;color:var(--muted);margin-top:2px;}
+  .btn{
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    color:#111;padding:11px 18px;border:0;border-radius:12px;
+    font-weight:700;cursor:pointer;transition:.3s;
+    box-shadow:0 4px 20px rgba(255,200,60,.35);
+  }
+  .btn:hover{transform:translateY(-3px) scale(1.05);}
+
+  .stage{
+    margin:40px auto 0;
+    width:min(820px,92vw);
+    height:calc(min(820px,92vw)*0.58);
+    background:linear-gradient(to bottom,#ffd05a 0%,#eeb439 100%);
+    border-radius:var(--radius) var(--radius) 0 0;
+    border:1px solid var(--border);
+    display:flex;justify-content:center;align-items:center;
+    position:relative;overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,.6);
+  }
+  .stage:before{
+    content:"";
+    position:absolute;inset:0;
+    background:radial-gradient(circle at 50% 10%,rgba(255,255,255,.28),transparent 70%);
+    pointer-events:none;filter:blur(70px);
+  }
+
+  .podium{
+    width:min(820px,92vw);
+    height:clamp(80px,10vw,105px);
+    background:linear-gradient(to bottom,#707070 0%,#616161 100%);
+    margin:0 auto 32px;
+    border-radius:0 0 var(--radius) var(--radius);
+    border:1px solid var(--border);border-top:none;
+    box-shadow:0 -2px 26px rgba(0,0,0,.44) inset;
+  }
+
+  h1,h2,h3{text-align:center;font-weight:700;}
+  h1{font-size:32px;margin-top:26px;margin-bottom:12px;}
+  h2{font-size:24px;margin-bottom:12px;}
+  h3{font-size:20px;margin-bottom:10px;}
+
+  p{max-width:780px;margin:0 auto 12px;text-align:center;}
+  ul{max-width:700px;margin:16px auto;padding-left:0;list-style:none;}
+  li{margin-bottom:8px;}
+
+  .feature-grid{
+    display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:20px;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--border);
+    width:250px;padding:16px;border-radius:var(--radius);
+    text-align:left;backdrop-filter:blur(10px);
+    transition:.25s;box-shadow:0 6px 24px rgba(0,0,0,.4);
+  }
+  .card:hover{transform:translateY(-4px);border-color:var(--accent2);}
+
+  footer{text-align:center;margin-top:38px;color:var(--muted);font-size:13px;}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <div>
+      <div class="brand">SkyForge Creative Studio</div>
+      <div class="subtle">Singapore • Premium Character Animation Studio</div>
+    </div>
+    <button class="btn">Interactive Demo</button>
+  </header>
+
+  <h1>Dragon Mascot Showcase</h1>
+  <p style="font-size:17px;margin-bottom:22px;">
+    A flagship digital mascot blending imagination, interaction, and modern education.
+  </p>
+
+  <div class="stage"><canvas id="dragon"></canvas></div>
+  <div class="podium"></div>
+
+  <h2>The Purpose of a Digital Mascot</h2>
+  <p>A character who can observe users and respond creates deep engagement and excitement.</p>
+
+  <ul>
+    <li>• Strong symbolic meaning — curiosity, bravery & intelligence</li>
+    <li>• Encourages motivation in learning environments</li>
+    <li>• Fits perfectly into games, mobile apps and stories</li>
+    <li>• Highly memorable for branding</li>
+  </ul>
+
+  <h3>Interactive Behaviors (Phase 1)</h3>
+  <p>Simple but powerful — gives personality instantly</p>
+
+  <div class="feature-grid">
+    <div class="card">
+      <strong>Eye Tracking 👀</strong><br/>
+      Reacts to your movement → feels alive
+    </div>
+
+    <div class="card">
+      <strong>Wing Flap 🪽</strong><br/>
+      Click → shows emotion & excitement
+    </div>
+
+    <div class="card">
+      <strong>Idle Behavior</strong><br/>
+      Subtle movements avoid robotic feeling
+    </div>
+  </div>
+
+  <h3>Ready For Next Phases</h3>
+  <p>
+    Talking, cheering, emotions, mini-quests and more can be added  
+    to unlock a complete companion experience.
+  </p>
+
+  <footer>
+    Confidential Preview — Not for Redistribution<br/>
+    ©2025 SkyForge Creative Studio – Singapore. All Rights Reserved.
+  </footer>
+</div>
+
+<script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+<script>
+  const canvas=document.getElementById("dragon");
+  function resizeCanvas(){canvas.width=Math.min(820,Math.floor(window.innerWidth*0.92));canvas.height=Math.floor(canvas.width*0.58);}
+  resizeCanvas();
+  const riveFile=new rive.Rive({src:"./8743-16725-dragon-animations.riv",canvas,autoplay:true,stateMachines:"State Machine 1"});
+  window.addEventListener("mousemove",e=>{const center=window.innerWidth/2;riveFile.play(e.clientX<center?"Look_L":"Look_R")});
+  window.addEventListener("mouseleave",()=>riveFile.play("Idle_look"));
+  window.addEventListener("click",()=>{riveFile.play("Wing");setTimeout(()=>riveFile.play("Idle_look"),600)});
+  window.addEventListener("resize",resizeCanvas);
+</script>
+
+</body>
+</html>
